@@ -6,15 +6,16 @@
 <title>Loomdemo — 一支影片,勝過千言萬語</title>
 <style>
   :root {
-    --violet: #625df5;
-    --violet-dark: #4b47d6;
-    --violet-light: #e9e8fd;
-    --ink: #14112e;
-    --gray: #5f5d75;
-    --bg: #ffffff;
-    --bg-soft: #f7f7fb;
+    --blue: #2563eb;
+    --blue-dark: #1d4ed8;
+    --blue-light: #dbeafe;
+    --sky: #38bdf8;
+    --ink: #0f1e3d;
+    --gray: #556080;
+    --bg: #eff5ff;
+    --bg-soft: #dfeaff;
     --radius: 16px;
-    --shadow: 0 10px 40px rgba(20, 17, 46, 0.08);
+    --shadow: 0 10px 40px rgba(15, 30, 61, 0.10);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -41,26 +42,26 @@
     border: none;
   }
   .btn-primary {
-    background: var(--violet);
+    background: var(--blue);
     color: #fff;
-    box-shadow: 0 6px 20px rgba(98, 93, 245, 0.35);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
   }
-  .btn-primary:hover { background: var(--violet-dark); transform: translateY(-2px); }
+  .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
   .btn-ghost {
     background: transparent;
     color: var(--ink);
-    border: 2px solid #e3e2ef;
+    border: 2px solid #cdddff;
   }
-  .btn-ghost:hover { border-color: var(--violet); color: var(--violet); }
+  .btn-ghost:hover { border-color: var(--blue); color: var(--blue); }
 
   /* ---------- Nav ---------- */
   header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(239, 245, 255, 0.85);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid #eeedf5;
+    border-bottom: 1px solid #d5e3ff;
   }
   .nav {
     display: flex;
@@ -79,7 +80,7 @@
   .logo-mark {
     width: 32px; height: 32px;
     border-radius: 50%;
-    background: conic-gradient(from 0deg, var(--violet) 0 25%, #8b87f8 25% 50%, var(--violet) 50% 75%, #8b87f8 75% 100%);
+    background: conic-gradient(from 0deg, var(--blue) 0 25%, var(--sky) 25% 50%, var(--blue) 50% 75%, var(--sky) 75% 100%);
     position: relative;
   }
   .logo-mark::after {
@@ -94,7 +95,7 @@
     font-weight: 500;
     color: var(--gray);
   }
-  .nav-links a:hover { color: var(--violet); }
+  .nav-links a:hover { color: var(--blue); }
   .nav-cta { display: flex; gap: 12px; align-items: center; }
   .nav-cta .btn { padding: 10px 20px; font-size: 15px; }
 
@@ -103,8 +104,8 @@
     text-align: center;
     padding: 96px 0 64px;
     background:
-      radial-gradient(60% 50% at 50% 0%, rgba(98, 93, 245, 0.12) 0%, transparent 70%),
-      radial-gradient(40% 40% at 85% 20%, rgba(139, 135, 248, 0.10) 0%, transparent 70%);
+      radial-gradient(60% 50% at 50% 0%, rgba(37, 99, 235, 0.14) 0%, transparent 70%),
+      radial-gradient(40% 40% at 85% 20%, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
   }
   .hero h1 {
     font-size: clamp(40px, 6vw, 68px);
@@ -116,7 +117,7 @@
   }
   .hero h1 em {
     font-style: normal;
-    background: linear-gradient(120deg, var(--violet), #9d6bf7);
+    background: linear-gradient(120deg, var(--blue), #38bdf8);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -135,8 +136,8 @@
     margin: 64px auto 0;
     max-width: 880px;
     border-radius: 20px;
-    background: linear-gradient(135deg, #1c1936, #2d2a54);
-    box-shadow: 0 30px 80px rgba(20, 17, 46, 0.25);
+    background: linear-gradient(135deg, #0c1a3a, #14337a);
+    box-shadow: 0 30px 80px rgba(15, 30, 61, 0.28);
     padding: 18px;
     position: relative;
   }
@@ -149,7 +150,7 @@
     display: flex; gap: 8px;
     padding: 12px 16px;
     background: var(--bg-soft);
-    border-bottom: 1px solid #eeedf5;
+    border-bottom: 1px solid #d5e3ff;
   }
   .mock-bar span { width: 12px; height: 12px; border-radius: 50%; }
   .mock-bar span:nth-child(1) { background: #ff5f57; }
@@ -158,7 +159,7 @@
   .mock-body {
     aspect-ratio: 16 / 8;
     background:
-      linear-gradient(160deg, #f2f1fd 0%, #e9e8fd 60%, #ded9fb 100%);
+      linear-gradient(160deg, #eaf3ff 0%, #dbeafe 60%, #c7ddff 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,9 +168,9 @@
   .play-btn {
     width: 84px; height: 84px;
     border-radius: 50%;
-    background: var(--violet);
+    background: var(--blue);
     display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 12px 30px rgba(98, 93, 245, 0.45);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
     cursor: pointer;
     transition: transform .2s ease;
   }
@@ -186,7 +187,7 @@
     left: 28px; bottom: 28px;
     width: 110px; height: 110px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #8b87f8, #625df5);
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
     border: 4px solid #fff;
     box-shadow: var(--shadow);
     display: flex; align-items: center; justify-content: center;
@@ -211,7 +212,7 @@
     gap: 20px 48px;
     font-size: 20px;
     font-weight: 700;
-    color: #a3a1b8;
+    color: #9fb0d6;
     letter-spacing: 0.5px;
   }
 
@@ -220,7 +221,7 @@
   section.block.alt { background: var(--bg-soft); }
   .eyebrow {
     display: inline-block;
-    color: var(--violet);
+    color: var(--blue);
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1.5px;
@@ -250,7 +251,7 @@
   .split.reverse > .split-visual { order: -1; }
   .split-visual {
     border-radius: var(--radius);
-    background: linear-gradient(150deg, var(--violet-light), #f3ecfe);
+    background: linear-gradient(150deg, var(--blue-light), #eaf3ff);
     aspect-ratio: 4 / 3;
     display: flex;
     align-items: center;
@@ -272,8 +273,8 @@
     flex-shrink: 0;
     width: 24px; height: 24px;
     border-radius: 50%;
-    background: var(--violet-light);
-    color: var(--violet);
+    background: var(--blue-light);
+    color: var(--blue);
     font-weight: 800;
     display: flex; align-items: center; justify-content: center;
     font-size: 13px;
@@ -289,7 +290,7 @@
   }
   .card {
     background: #fff;
-    border: 1px solid #eeedf5;
+    border: 1px solid #d9e6ff;
     border-radius: var(--radius);
     padding: 32px 28px;
     transition: transform .2s ease, box-shadow .2s ease;
@@ -298,7 +299,7 @@
   .card .icon {
     width: 52px; height: 52px;
     border-radius: 14px;
-    background: var(--violet-light);
+    background: var(--blue-light);
     display: flex; align-items: center; justify-content: center;
     font-size: 26px;
     margin-bottom: 20px;
@@ -327,10 +328,10 @@
   .usecase .uc-icon { font-size: 34px; margin-bottom: auto; }
   .usecase h3 { font-size: 20px; margin: 16px 0 4px; }
   .usecase p { font-size: 14px; opacity: 0.85; }
-  .uc-1 { background: linear-gradient(150deg, #625df5, #4b47d6); }
-  .uc-2 { background: linear-gradient(150deg, #9d6bf7, #7c4be0); }
-  .uc-3 { background: linear-gradient(150deg, #f56594, #d6477b); }
-  .uc-4 { background: linear-gradient(150deg, #2fb5a3, #1d8a7b); }
+  .uc-1 { background: linear-gradient(150deg, #2563eb, #1d4ed8); }
+  .uc-2 { background: linear-gradient(150deg, #38bdf8, #0ea5e9); }
+  .uc-3 { background: linear-gradient(150deg, #6366f1, #4338ca); }
+  .uc-4 { background: linear-gradient(150deg, #06b6d4, #0891b2); }
 
   /* ---------- Testimonials ---------- */
   .quotes {
@@ -341,7 +342,7 @@
   }
   .quote {
     background: #fff;
-    border: 1px solid #eeedf5;
+    border: 1px solid #d9e6ff;
     border-radius: var(--radius);
     padding: 32px 28px;
     display: flex;
@@ -374,7 +375,7 @@
     font-size: clamp(36px, 5vw, 52px);
     font-weight: 800;
     letter-spacing: -1px;
-    background: linear-gradient(120deg, var(--violet), #9d6bf7);
+    background: linear-gradient(120deg, var(--blue), #38bdf8);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -386,7 +387,7 @@
     margin: 88px auto;
     max-width: 1092px;
     border-radius: 28px;
-    background: linear-gradient(140deg, #1c1936 0%, #37327a 55%, #625df5 100%);
+    background: linear-gradient(140deg, #0c1a3a 0%, #1e40af 55%, #2563eb 100%);
     color: #fff;
     text-align: center;
     padding: 88px 32px;
@@ -399,15 +400,15 @@
   .final-cta p { opacity: 0.85; font-size: 18px; margin-bottom: 36px; }
   .final-cta .btn-primary {
     background: #fff;
-    color: var(--violet-dark);
+    color: var(--blue-dark);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   }
-  .final-cta .btn-primary:hover { background: #f0effe; }
+  .final-cta .btn-primary:hover { background: #eaf2ff; }
   .final-cta .platforms { margin-top: 20px; font-size: 14px; opacity: 0.7; }
 
   /* ---------- Footer ---------- */
   footer {
-    border-top: 1px solid #eeedf5;
+    border-top: 1px solid #d5e3ff;
     padding: 64px 0 40px;
     color: var(--gray);
     font-size: 14px;
@@ -421,14 +422,14 @@
   .footer-grid h4 { color: var(--ink); font-size: 15px; margin-bottom: 16px; }
   .footer-grid ul { list-style: none; }
   .footer-grid li { margin-bottom: 10px; }
-  .footer-grid a:hover { color: var(--violet); }
+  .footer-grid a:hover { color: var(--blue); }
   .footer-bottom {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
     padding-top: 24px;
-    border-top: 1px solid #eeedf5;
+    border-top: 1px solid #d5e3ff;
   }
 
   /* ---------- RWD ---------- */
@@ -603,7 +604,7 @@
         <div class="stars">★★★★★</div>
         <p>「影片訊息讓我們這個分散式團隊能更輕鬆地協作與分享想法,大幅提升了整體影響力。」</p>
         <div class="who">
-          <div class="avatar" style="background:#625df5;">A</div>
+          <div class="avatar" style="background:#2563eb;">A</div>
           <div class="meta"><strong>Andrew R.</strong><span>Design Lead, MetaLab</span></div>
         </div>
       </div>
@@ -611,7 +612,7 @@
         <div class="stars">★★★★★</div>
         <p>「以前需要開 30 分鐘會議才能講清楚的事,現在一支 3 分鐘的影片就搞定,而且對方可以隨時重看。」</p>
         <div class="who">
-          <div class="avatar" style="background:#9d6bf7;">K</div>
+          <div class="avatar" style="background:#38bdf8;">K</div>
           <div class="meta"><strong>Katie B.</strong><span>Chief People Officer, HubSpot</span></div>
         </div>
       </div>
@@ -619,7 +620,7 @@
         <div class="stars">★★★★★</div>
         <p>「客戶成功團隊用影片做產品導覽後,客戶回覆率提升了一倍,onboarding 時間也縮短了一半。」</p>
         <div class="who">
-          <div class="avatar" style="background:#f56594;">E</div>
+          <div class="avatar" style="background:#6366f1;">E</div>
           <div class="meta"><strong>Erica G.</strong><span>Customer Success, Pearson</span></div>
         </div>
       </div>
