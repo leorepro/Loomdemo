@@ -23,7 +23,9 @@ python3 -m http.server 8080
 
 - `index.html` — 頁面內容與結構
 - `styles.css` — 樣式
-- `script.js` — 頁面互動邏輯（含下方刻意埋入的 bug）
+- `script.js` — 頁面互動邏輯,包含:
+  - 一般網站邏輯(行動版導覽選單開關、播放按鈕鍵盤操作)
+  - 下方刻意埋入的 6 個 bug(見下表)
 - `.github/workflows/deploy.yml` — 推送到 `main` 分支後自動部署到 GitHub Pages
 
 ## 刻意埋入的 Bug 清單
